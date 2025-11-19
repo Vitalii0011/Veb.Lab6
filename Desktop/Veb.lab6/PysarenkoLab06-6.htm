@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої Друзі/Одногрупники - PysarenkoLab06-6</title>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; text-align: center; background-color: #ecfdf5; color: #064e3b; }
+        h1 { color: #059669; border-bottom: 2px solid #34d399; padding-bottom: 10px; }
+        .friend-container { 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px; 
+            margin-top: 30px; 
+            width: 650px; /* Фіксована ширина для коректного картування */
+            margin: 30px auto;
+        }
+        .friend-box { text-align: center; }
+        .friend-box img { 
+            width: 300px; 
+            height: 350px; 
+            object-fit: cover; 
+            border: 5px solid #065f46;
+            cursor: pointer;
+        }
+        .info-block { margin-top: 50px; text-align: left; max-width: 600px; margin: 50px auto; padding: 20px; border: 1px dashed #34d399;}
+        .info-block h2 { color: #059669; }
+    </style>
+</head>
+<body>
+    <h1>🤝 Мої Друзі та Одногрупники</h1>
+    <p>Наведіть курсор на фото для швидкої інформації. **Клікніть**, щоб перейти до деталей (за допомогою навігаційної карти).</p>
+    
+    <div class="friend-container">
+        
+        <div class="friend-box">
+            <img src="images/friend_1.jpg" 
+                 usemap="#friends_map" 
+                 alt="Фото Друга 1" 
+                 style="position: relative;">
+            <p>Друг 1: Іван (Клікніть по фото)</p>
+        </div>
+        
+        <div class="friend-box">
+            <img src="images/friend_2.jpg" 
+                 usemap="#friends_map" 
+                 alt="Фото Друга 2"
+                 style="position: relative;">
+            <p>Друг 2: Марія (Клікніть по фото)</p>
+        </div>
+    </div>
+    
+    <map name="friends_map">
+        <area shape="rect" 
+              coords="0, 0, 300, 350" 
+              href="#info_friend1" 
+              alt="Деталі про Івана" 
+              title="🎓 Іван Петренко. Наш програміст, відмінник з математики.">
+              
+        <area shape="rect" 
+              coords="340, 0, 640, 350" 
+              href="#info_friend2" 
+              alt="Деталі про Марію" 
+              title="📚 Марія Ковальчук. Староста групи, захоплюється дизайном.">
+    </map>
+    
+    <div class="info-block">
+        <h2 id="info_friend1">👤 Детальна інформація про Івана Петренка</h2>
+        <p>Іван займається **фронтенд-розробкою** і є неперевершеним майстром HTML та CSS. У вільний час він веде блог про технології. Навігаційна карта на фото виводить на цей блок інформації.</p>
+        
+        <hr>
+        
+        <h2 id="info_friend2">👩‍🎓 Детальна інформація про Марію Ковальчук</h2>
+        <p>Марія планує стати системним аналітиком. Вона дуже організована і завжди допомагає групі. **Спливаючий заголовок (title)** на її фото дає короткий опис.</p>
+    </div>
+
+    <p style="margin-top: 30px;">
+        <a href="PysarenkoLab06-4.htm">← Повернутися на Навігаційну Карту (PysarenkoLab06-4.htm)</a>
+    </p>
+</body>
+</html>

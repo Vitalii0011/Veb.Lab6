@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навігаційна Карта Фігур - PysarenkoLab06-4</title> 
+    <style>
+        body { font-family: 'Arial', sans-serif; text-align: center; background-color: #f0f8ff; color: #1f2937; }
+        h1 { color: #5b21b6; margin-bottom: 30px; }
+        .container {
+            border: 3px solid #7c3aed;
+            padding: 20px;
+            display: inline-block;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        #map_image { 
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Навігаційний Центр Лабораторної Роботи Pysarenko (PysarenkoLab06-4)</h1>
+    
+    <p>Клікніть на одну з геометричних фігур для переходу до відповідної сторінки:</p>
+    
+    <div class="container">
+        <img id="map_image" src="images/shapes.png" 
+             usemap="#lab_navigation_map" 
+             alt="Геометричні фігури: Коло, Прямокутник, Багатокутник" 
+             width="650" height="350">
+
+        <map name="lab_navigation_map">
+            
+            <area shape="rect" 
+                  coords="50, 50, 200, 150" 
+                  href="PysarenkoLab01-9.htm" 
+                  alt="Домашня сторінка" 
+                  title="✅ Копія Домашньої сторінки (PysarenkoLab01-9.htm)">
+                  
+            <area shape="circle" 
+                  coords="325, 100, 75" 
+                  href="PysarenkoLab05-3.html" 
+                  alt="Мої гіперпосилання" 
+                  title="🔗 Копія Гіперпосилань (PysarenkoLab05-3.html)">
+                  
+            <area shape="poly" 
+                  coords="500, 250, 600, 150, 650, 250" 
+                  href="PysarenkoLab06-3.htm" 
+                  alt="Моя Батьківщина" 
+                  title="🏡 Завдання 1: Батьківщина зі спливаючим текстом (PysarenkoLab06-3.htm)">
+
+            <area shape="rect" 
+                  coords="20, 200, 180, 300" 
+                  href="PysarenkoLab06-5.htm" 
+                  alt="Сенсорне Зображення" 
+                  title="🖼️ Завдання 3: Сенсорне зображення (PysarenkoLab06-5.htm)">
+
+            <area shape="circle" 
+                  coords="450, 300, 40" 
+                  href="PysarenkoLab06-6.htm" 
+                  alt="Мої Друзі" 
+                  title="👥 Завдання 4: WEB-сторінка про друзів (PysarenkoLab06-6.htm)">
+                  
+        </map>
+        
+        <p style="font-size: 0.8em; color: #6b7280; margin-top: 20px;">*Змініть координати (`coords`), щоб вони точно відповідали вашим фігурам на зображенні **shapes.png**.</p>
+    </div>
+</body>
+</html>

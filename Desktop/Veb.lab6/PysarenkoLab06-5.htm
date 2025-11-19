@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сенсорне Зображення (Poly) - PysarenkoLab06-5</title>
+    <style>
+        body { font-family: 'Tahoma', sans-serif; text-align: center; background-color: #fffbeb; color: #92400e; }
+        h1 { color: #f59e0b; border-bottom: 2px solid #fcd34d; padding-bottom: 10px; }
+        img { border: 5px solid #f59e0b; }
+    </style>
+</head>
+<body>
+    <h1>📍 Сенсорна Карта (Image Map) Рідного Краю</h1>
+    <p>Наведіть курсор на різні, **довільно визначені області** зображення, щоб побачити підказки:</p>
+    
+    <img src="images/hometown_main.jpg" 
+         usemap="#hometown_poly_map" 
+         alt="Сенсорна карта рідного міста" 
+         width="700" height="400">
+
+    <map name="hometown_poly_map">
+        <area shape="poly" 
+              coords="100, 100, 200, 50, 300, 100, 250, 200, 150, 200" 
+              href="#" 
+              alt="Історичний Центр" 
+              title="🏛️ Історичний Центр. Довільна область, що охоплює старі будівлі.">
+              
+        <area shape="poly" 
+              coords="500, 50, 650, 150, 550, 300, 450, 100" 
+              href="#" 
+              alt="Річкова Заплава" 
+              title="🌊 Річкова Заплава. Форма області відповідає вигину річки.">
+              
+        <area shape="poly" 
+              coords="50, 300, 150, 350, 250, 300" 
+              href="#" 
+              alt="Заміський Парк" 
+              title="🌳 Парк за містом. Неправильна трикутна область.">
+              
+        </map>
+    
+    <p style="margin-top: 30px;">
+        <a href="PysarenkoLab06-4.htm">← Повернутися на Навігаційну Карту (PysarenkoLab06-4.htm)</a>
+    </p>
+</body>
+</html>

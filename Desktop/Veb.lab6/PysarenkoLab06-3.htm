@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Батьківщина - PysarenkoLab06-3</title>
+    <style>
+        body { font-family: 'Verdana', sans-serif; text-align: center; background-color: #f0fdf4; color: #1e3a8a; }
+        h1 { color: #059669; border-bottom: 2px solid #34d399; padding-bottom: 10px; }
+        .gallery { display: flex; justify-content: center; gap: 25px; margin-top: 30px; }
+        .gallery img { 
+            width: 300px; 
+            height: 200px; 
+            object-fit: cover; 
+            border: 5px solid #059669; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>🌍 Моя Батьківщина: Назва Вашого Міста</h1>
+    <p>Наведіть курсор на зображення, щоб побачити **спливаючий текст (підказку)** про цю місцевість.</p>
+    
+    <div class="gallery">
+        <img src="images/hometown_main.jpg" 
+             title="Головна площа міста. Тут збираються люди на свята та важливі події."
+             alt="Головна площа">
+             
+        <img src="images/hometown_1.jpg" 
+             title="Старовинна церква, збудована ще у XVII столітті."
+             alt="Старовинна церква">
+             
+        <img src="images/hometown_2.jpg" 
+             title="Сучасний парк біля річки. Улюблене місце для ранкових пробіжок."
+             alt="Річковий парк">
+    </div>
+    
+    <p style="margin-top: 50px;">
+        <a href="PysarenkoLab06-4.htm">← Повернутися на Навігаційну Карту (PysarenkoLab06-4.htm)</a>
+    </p>
+</body>
+</html>
