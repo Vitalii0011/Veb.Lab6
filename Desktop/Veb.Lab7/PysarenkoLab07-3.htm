@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>П-Л07-3. Анкета за зразком</title>
+</head>
+<body>
+    <h1>Анкета користувача</h1>
+    <p>Будь ласка, заповніть форму для участі в опитуванні.</p>
+
+    <form action="submit.php" method="post">
+        <fieldset>
+            <legend>Особиста інформація</legend>
+            <p>
+                <label for="surname">Прізвище:</label>
+                <input type="text" id="surname" name="surname" size="30" required>
+            </p>
+            <p>
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" size="30" required>
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" size="30" required>
+            </p>
+            <p>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" pattern="\+380[0-9]{9}" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ваші уподобання</legend>
+            <p>
+                <label for="age">Ваш вік:</label>
+                <input type="number" id="age" name="age" min="18" max="100" value="25">
+            </p>
+            
+            <p>Як часто ви користуєтеся Інтернетом?</p>
+            <input type="radio" id="daily" name="frequency" value="daily" checked>
+            <label for="daily">Щодня</label><br>
+            <input type="radio" id="weekly" name="frequency" value="weekly">
+            <label for="weekly">Кілька разів на тиждень</label><br>
+            <input type="radio" id="rarely" name="frequency" value="rarely">
+            <label for="rarely">Рідко</label>
+
+            <p>Які веб-технології ви знаєте? (Оберіть декілька)</p>
+            <input type="checkbox" id="html" name="technologies[]" value="html">
+            <label for="html">HTML</label><br>
+            <input type="checkbox" id="css" name="technologies[]" value="css">
+            <label for="css">CSS</label><br>
+            <input type="checkbox" id="javascript" name="technologies[]" value="javascript">
+            <label for="javascript">JavaScript</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Додаткова інформація</legend>
+            <p>
+                <label for="message">Ваші побажання/коментарі:</label><br>
+                <textarea id="message" name="message" rows="5" cols="60"></textarea>
+            </p>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Надіслати анкету">
+        <input type="reset" value="Скинути">
+    </form>
+</body>
+</html>

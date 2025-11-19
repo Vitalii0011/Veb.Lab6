@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>П-Л07-2. Демонстрація елементів форм</title>
+</head>
+<body>
+    <h1>Демонстрація елементів форм</h1>
+    <form action="submit.php" method="post">
+        
+        <fieldset>
+            <legend>Текстові поля</legend>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password"><br><br>
+            
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="comment">Коментар (textarea):</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Кнопки вибору (Radio & Checkbox)</legend>
+            
+            <p>Виберіть стать (radio):</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Чоловіча</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Жіноча</label><br><br>
+            
+            <p>Виберіть інтереси (checkbox):</p>
+            <input type="checkbox" id="coding" name="interests" value="coding">
+            <label for="coding">Програмування</label><br>
+            <input type="checkbox" id="design" name="interests" value="design">
+            <label for="design">Дизайн</label><br>
+            <input type="checkbox" id="sport" name="interests" value="sport">
+            <label for="sport">Спорт</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Списки та елементи управління</legend>
+            
+            <label for="country">Виберіть країну (select):</label>
+            <select id="country" name="country">
+                <option value="ua">Україна</option>
+                <option value="pl">Польща</option>
+                <option value="de">Німеччина</option>
+            </select><br><br>
+            
+            <label for="file">Завантажити файл:</label>
+            <input type="file" id="file" name="file"><br><br>
+            
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date"><br><br>
+            
+            <label for="range">Рівень (Range):</label>
+            <input type="range" id="range" name="range" min="0" max="100" value="50">
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Надіслати форму">
+        <input type="reset" value="Очистити форму">
+    </form>
+</body>
+</html>

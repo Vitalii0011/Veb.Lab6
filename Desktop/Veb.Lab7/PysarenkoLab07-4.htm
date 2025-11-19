@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Замовлення - PysarenkoLab07-4</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: #f9fafb; }
+        .form-container { max-width: 700px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .form-section { margin-bottom: 25px; padding: 15px; border: 1px solid #e5e7eb; border-radius: 6px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #1f2937; }
+        input[type="text"], textarea, select { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #d1d5db; 
+            border-radius: 4px; 
+            box-sizing: border-box; 
+            margin-top: 5px;
+        }
+        select[multiple] { height: 120px; }
+        .radio-group, .checkbox-group { margin-top: 10px; }
+        .radio-group input, .checkbox-group input { margin-right: 8px; }
+        .radio-group label, .checkbox-group label { display: inline-block; font-weight: normal; margin-right: 20px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>🛍️ Форма Замовлення та Оплати</h1>
+        
+        <form action="/place-order" method="post">
+            
+            <div class="form-section">
+                <h2>1. Облікові дані</h2>
+                
+                <label for="bank_account">Номер банківського рахунку:</label>
+                <input type="text" id="bank_account" name="bank_account" pattern="[0-9]{10,20}" title="Введіть коректний номер рахунку (лише цифри)" required>
+                
+                <label for="personal_id" style="margin-top: 15px;">Особистий номер користувача:</label>
+                <input type="text" id="personal_id" name="personal_id" required>
+            </div>
+            
+            <div class="form-section">
+                <h2>2. Вибір товарів</h2>
+                
+                <label for="products">Список товарів (Виберіть один або декілька):</label>
+                <select id="products" name="products[]" multiple required>
+                    <option value="laptop">Ноутбук ProX</option>
+                    <option value="monitor">Монітор UltraHD</option>
+                    <option value="keyboard">Механічна клавіатура</option>
+                    <option value="mouse">Бездротова миша</option>
+                    <option value="webcam">Веб-камера 4K</option>
+                </select>
+                
+                <label for="comments" style="margin-top: 15px;">Довільні коментарі користувача:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            
+            <div class="form-section">
+                <h2>3. Оплата та звітність</h2>
+                
+                <div class="radio-group">
+                    <label>Вид оплати (Оберіть один):</label>
+                    <input type="radio" id="cash" name="payment_type" value="cash" required>
+                    <label for="cash">Готівковий розрахунок</label>
+                    
+                    <input type="radio" id="card" name="payment_type" value="card">
+                    <label for="card">Безготівковий розрахунок</label>
+                </div>
+
+                <div class="checkbox-group" style="margin-top: 20px;">
+                    <label>Бажана додаткова інформація у відповіді (Оберіть одну або обидві):</label>
+                    <input type="checkbox" id="balance" name="info_balance" value="yes">
+                    <label for="balance">Дані про залишки на рахунку</label>
+                    
+                    <input type="checkbox" id="payments" name="info_payments" value="yes">
+                    <label for="payments">Список останніх виплат по рахунку</label>
+                </div>
+            </div>
+
+            <input type="submit" value="Оформити Замовлення" style="padding: 10px 20px; font-size: 16px; background-color: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px;">
+        </form>
+    </div>
+</body>
+</html>
